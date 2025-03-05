@@ -80,6 +80,8 @@ main {
     text-align: center;
     align-items: center;
     margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
     grid-column: 1/3;
 }
 
