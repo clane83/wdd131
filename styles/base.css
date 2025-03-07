@@ -19,6 +19,7 @@ header {
     border-top: 0px;
 }
 
+
 h1 {
     background-color: #156064;
     color: #DBB68F;
@@ -83,6 +84,10 @@ main {
     padding-left: 20px;
     padding-right: 20px;
     grid-column: 1/3;
+}
+
+.card li {
+    padding: 1rem;
 }
 
 .card div {
