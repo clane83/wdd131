@@ -95,7 +95,7 @@ main {
 
 .card img {
     max-width: 300px;
-    height: auto;
+    height: 200;
     place-items: center;
     padding: 1rem;
     margin: 1rem;
