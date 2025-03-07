@@ -1,8 +1,3 @@
-const today = new Date();
-let year = today.getFullYear();
-document.getElementById("currentYear").innerHTML = year;
-
-let lastModDate = new Date(document.lastModified);
-        
-let formattedDate = lastModDate.toLocaleString();
-document.getElementById("lastModified").textContent = "Last Modification: " + formattedDate;
+document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+     
+document.getElementById("lastModified").textContent = "Last Modification: " + new Date(document.lastModified).toLocaleString();
