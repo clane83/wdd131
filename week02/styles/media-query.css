@@ -1,0 +1,42 @@
+body {
+ font-family: "Robo, sans-serif";
+ background-color: white;
+ 
+}
+
+header {
+    max-width: 640px;
+    margin: 1rem auto;
+    padding: 2rem;
+    
+}
+
+h1 {
+    background-color: lightblue;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    background-color: lightblue
+    
+}
+
+section {
+    padding: 1rem;
+    background-color: white;
+    border: gray solid .5px;
+    margin: 1rem;
+    
+}
+
+footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: lightblue
+    
+}
