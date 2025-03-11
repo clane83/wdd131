@@ -153,3 +153,10 @@ footer p {
     margin-bottom: 0px;
     margin-top: 0px;
 }
+
+/* 
+span {background-color: red}
+
+@media only screen and (min-width: 32rem) {
+    span {background-color: green}
+} */
