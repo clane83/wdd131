@@ -17,6 +17,7 @@ body {
 
 header {
     grid-column: 1 / 4;
+    width: auto;
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -28,13 +29,29 @@ header {
     
 }
 
-#menu{
-    display: none;
+
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+    cursor: pointer;
+ 	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
 }
 
 .navigation {
-    display: flex; /* Ensure the navigation items are arranged horizontally */
-    gap: 2rem; /* Space out the navigation items */
+    display: none; /* Ensure the navigation items are arranged horizontally */
+    flex-direction: column;
     list-style: none;
     padding: 0; /* Remove any default padding */
     align-items: center;
@@ -43,7 +60,15 @@ header {
 
 }
 
+.navigation.open{
+    display: flex;
+    margin-right: 5px;
+}
+
 .navigation a{
+    display: none;
+    padding: 1rem;
+    text-align: center;
     text-decoration: none;
     color: #eee5e9;
     align-items: center;
@@ -51,6 +76,10 @@ header {
 
 li a:hover{
     color: #9a7197;
+}
+
+.open a {
+    display: block;
 }
 
 main {

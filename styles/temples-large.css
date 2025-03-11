@@ -1,15 +1,16 @@
-@media screen and (min-width: 37.5rem) {
+@media screen and (min-width: 700px) {
     
-    /* #menu {
+    #menu {
 		display: none; 
-	} */
+	}
 
-	/* .navigation ul{
-		flex-direction: row;
+	 .navigation {
+        display: flex;
+		flex-direction: row !important;
 	}
 
 	.navigation a {
 		display: block;
 		flex: 1 1 100%;
-	} */
+	} 
 } 
