@@ -1,0 +1,52 @@
+:root {
+    --font-weight: 400;
+    --small-font-weight: 300;
+    font-family: Montserrat, serif;
+    --background-colo: #2176AE;
+    --header-color: #eee5e9;
+    --font-weight: 600;
+    --small-font-weight: 400;
+
+}
+
+body {
+    display: grid;
+    grid-template: auto auto auto / auto auto auto;
+
+}
+
+header {
+    grid-column: 1 / 4;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1rem;
+    background-color: var(--background-colo);
+    color: var(--header-color);
+    font-weight: var(--font-weight);
+    font-size: x-large;
+    
+}
+
+nav ul {
+    display: flex; /* Ensure the navigation items are arranged horizontally */
+    gap: 2rem; /* Space out the navigation items */
+    list-style: none;
+    padding: 0; /* Remove any default padding */
+    align-items: center;
+    font-size: medium;
+    
+
+}
+
+nav ul a{
+    text-decoration: none;
+    color: #eee5e9;
+    align-items: center;
+}
+
+li a:hover{
+    color: #9a7197;
+   
+    
+}
