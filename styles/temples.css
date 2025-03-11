@@ -28,7 +28,11 @@ header {
     
 }
 
-nav ul {
+#menu{
+    display: none;
+}
+
+.navigation {
     display: flex; /* Ensure the navigation items are arranged horizontally */
     gap: 2rem; /* Space out the navigation items */
     list-style: none;
@@ -39,7 +43,7 @@ nav ul {
 
 }
 
-nav ul a{
+.navigation a{
     text-decoration: none;
     color: #eee5e9;
     align-items: center;
