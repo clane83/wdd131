@@ -47,6 +47,32 @@ nav ul a{
 
 li a:hover{
     color: #9a7197;
-   
-    
+}
+
+main {
+    width: 600px;
+    margin: 0 auto;
+}
+
+figure {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+img{ 
+    width: 100%;
+    height: auto;
+    margin: .5rem;
+}
+figcaption {
+    font-size: smaller;
+}
+
+footer{
+    grid-column: 1 / 4;
+    background-color: var(--background-colo);
+    color: var(--header-color);
+    font-weight: var(--small-font-weight);
+    font-size: small;
+    text-align: center;
 }
