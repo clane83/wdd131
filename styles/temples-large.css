@@ -21,7 +21,7 @@
         padding: 1rem;
     }
 
-    h1, h2 {
+    h2 {
         display: grid;
         grid-column: 1 / -1;
         text-align: center;
@@ -31,7 +31,7 @@
     figure {
         display: grid;
         grid-template-rows: auto 1fr;
-        padding: .5rem;
+        padding: .05rem;
 
 
     }
