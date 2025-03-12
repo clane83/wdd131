@@ -13,4 +13,38 @@
 		display: block;
 		flex: 1 1 100%;
 	} 
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        display: grid;
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    figure {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        padding: .5rem;
+
+
+    }
+
+    img{ 
+        grid-row: 1 / 2;
+        width: 100%;
+        height: auto;
+        margin: .5rem;
+    }
+    figcaption {
+        grid-row: 2 / 3;
+        font-size: smaller;
+        text-align: center;
+    }
 } 

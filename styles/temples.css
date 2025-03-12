@@ -85,10 +85,16 @@ li a:hover{
 main {
     width: 600px;
     margin: 0 auto;
+    display: grid;
+    
+}
+
+h1 {
+    grid-template-columns: 1fr;
+    text-align: center;
 }
 
 figure {
-    display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
 }
@@ -99,6 +105,7 @@ img{
 }
 figcaption {
     font-size: smaller;
+    text-align: center;
 }
 
 footer{
