@@ -14,12 +14,31 @@
 </head>
 <body>
     <header>
-        <h1>Temple Places</h1>
+        <h1>United States of America</h1>
     </header>
+
     <main>
-        <img src="" alt="temple">
-        <section>
+        <img src="images/bald-eagle.jpg" 
+        srcset="images/bald-eagle.jpg 450w, 
+                images/bald-eagle-large.jpg 960w,
+                images/bald-eagle-xlarge.jpg 1920w" 
+                 
+        sizes="(max-width: 450px) 450px, 
+               (max-width: 960px) 960px,
+               (max-width: 1920px) 1920px"
+        alt="bald eagle">
+        <section class="data">
             <h2>Data</h2>
+            <ul>
+                <li><b>Area:</b> 3.81 million sq miles</li>
+                <li><b>Population:</b> 340.1 million</li>
+                <li><b>Capital:</b> Washington D.C.</li>
+                <li><b>Languages:</b> English, Spanish</li>
+                <li><b>Currency:</b> US Dollar</li>
+                <li><b>Time Zone:</b> UTC-8</li>
+                <li><b>Calling Code:</b> +702 & +725</li>
+                <li><b>Internet TLD:</b> .mg</li>
+            </ul>
 
         </section>
         <section>
@@ -34,7 +53,7 @@
         <p id="lastModified">
         </p>
     </footer>
-    <script src="scripts/getdates.js" defer>
+    <script src="scripts/places.js" defer>
     </script>
 </body>
 </html>
