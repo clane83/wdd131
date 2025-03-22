@@ -1,3 +1,59 @@
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
 
+    main {
+        position: relative;
+        display: grid;
+        grid-template-columns: 3rem, 246px, auto, 246px, 3rem;
+        grid-template-rows: 2rem, auto, 290px, rem;
+        
+    }
+    section {
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .data {
+        margin-left: 3rem;
+        margin-top: 2rem;
+    }
+
+
+    .weather {
+    
+        bottom: 0;
+        right: 0;
+        /* grid-column: 3 / 4; */
+        /* margin-top: 200px;v*/
+        margin-right: 3rem;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: 2rem; 
+        margin-left: 3fr;
+        width: 246px;
+        height: 290px;
+        padding-bottom: 1rem;
+        z-index: 10;
+         
+    }
+
+    h2 {
+        color: black;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        margin-top: .5rem;
+        background-color: #156064;
+        margin-right: 2.5rem;
+        margin-left: -1.5rem;
+        border-top: 0rem solid;
+    }
+
+    .data h2, .weather h2 {
+        border-top: 0;
+    }
+
+    
 }
