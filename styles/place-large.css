@@ -47,7 +47,7 @@
         border-top: 0rem solid;
     }
 
-    .data h2, .weather h2{
+    .data h2, .weather h2::after{
         border-top: 0;
     }
 
