@@ -67,12 +67,14 @@ table{
     grid-column: 1 / 4;
     margin: 0 auto;
     list-style-type: none;
-    padding-bottom: 2rem;;
+    padding-bottom: 2rem;
     
 }
-
-td {
+#value {
     text-align: left;
+}
+td {
+    text-align: right;
 }
 
 .weather img{
