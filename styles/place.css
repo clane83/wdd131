@@ -70,11 +70,13 @@ table{
     padding-bottom: 2rem;
     
 }
-#value {
-    text-align: left;
-}
-td {
+
+td:nth-child(1){
     text-align: right;
+}
+
+td:nth-child(3){ 
+    text-align: left;
 }
 
 .weather img{

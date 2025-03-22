@@ -2,9 +2,7 @@
 
     main {
         position: relative;
-        display: grid;
-        grid-template-columns: 3rem 246px auto 246px 3rem;
-        grid-template-rows: 2rem auto 290px 2rem;
+        
         
     }
     section {
@@ -30,7 +28,7 @@
         margin-left: auto;
         margin-top: auto;
         margin-bottom: 2rem; 
-        margin-left: 3rem;
+        margin-right: 3rem;
         width: 246px;
         height: 290px;
         padding-bottom: 1rem;
@@ -49,7 +47,7 @@
         border-top: 0rem solid;
     }
 
-    .data h2, .weather h2::after {
+    .data h2, .weather h2{
         border-top: 0;
     }
 
