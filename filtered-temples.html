@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - temple photo album</title>
+    <meta name="description" content="christina lane, WDD 131 Dynamic Web Fundamentals">
+    <meta name="author" content="Christina Lane">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="">Home</a></li>
+                <li><a href="" id="oldtemple">Old</a></li>
+                <li><a href="" id="newtemple">New</a></li>
+                <li><a href="" id="largetemple">Large</a></li>
+                <li><a href="" id="smalltemple">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Visit a Temple Today</h2>
+        <div id="temples-container"></div>
+    </main>
+    <footer>
+        <p>
+            © <span id="currentYear"></span> Christina Lane United States of America
+        </p>
+        <p id="lastModified">
+        </p>
+    </footer>
+    <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>

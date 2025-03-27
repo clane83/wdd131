@@ -1,0 +1,42 @@
+@media screen and (min-width: 700px) {
+    
+    #menu {
+		display: none; 
+	}
+
+	 .navigation {
+        display: flex;
+		flex-direction: row !important;
+	}
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	} 
+
+    #temples-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+
+    .temple-card {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 16px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: tan;
+    }
+
+    h2 {
+        display: grid;
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    
+} 
