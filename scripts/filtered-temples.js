@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           templeName: "Mexico City Mexico",
           location: "Mexico City, Mexico",
-          dedicated: "2083, December, 2",
+          dedicated: "1983, December, 2",
           area: 116642,
           imageUrl:
           "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
@@ -71,41 +71,86 @@ document.addEventListener("DOMContentLoaded", () => {
         // Add more temple objects here...
       ];
 
-      createTempleCard();
+      createTempleCard(temples);
 
       const oldtempleLink = document.querySelector("#oldtemple");
+      const newtempleLink = document.querySelector("#newtemple");
+      const largetempleLink = document.querySelector("#largetemple");
+      const smalltempleLink = document.querySelector("#smalltemple");
 
-    oldtempleLink.addEventListener("click", () => {
-        const oldtemples = temples.filter(temple => temple.dedicated.startsWith("19"));
+
+    oldtempleLink.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const oldtemples = temples.filter(temple => {
+            const year = parseInt(temple.dedicated.split(",")[0]);
+            return year < 2000;
+        });
+            
         createTempleCard(oldtemples);
     });
 
-      function createTempleCard(filteredTemples){
-        const container = document.getElementById("temples-container")
-        temples.forEach(temple => {
+    newtempleLink.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const newtemples = temples.filter(temple => {
+            const year = parseInt(temple.dedicated.split(",")[0]);
+            return year >= 2000;
+        });
+            
+        createTempleCard(newtemples);
+    });
+
+    largetempleLink.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const largetemples = temples.filter(temple => {
+            const area = temple.area;
+            return area >= 90000;
+        });
+            
+        createTempleCard(largetemples);
+    });
+
+    smalltempleLink.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const smalltemples = temples.filter(temple => {
+            const area = temple.area;
+            return area < 10000;
+        });
+            
+        createTempleCard(smalltemples);
+    });
+
+    function createTempleCard(filteredTemples) {
+        const container = document.getElementById("temples-container");
+        container.innerHTML = ""; // Clear existing content
+    
+        filteredTemples.forEach(temple => {
             let card = document.createElement("section");
             let name = document.createElement("h3");
             let location = document.createElement("p");
             let dedication = document.createElement("p");
             let area = document.createElement("p");
             let img = document.createElement("img");
-
+    
             name.textContent = temple.templeName;
             location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-            dedication.innerHTML = `<span class="label">Dedication:</span> ${temple.dedication}`;
-            area.innerHTML = `<span class="label">Size:</span> ${temple.area}`;
+            dedication.innerHTML = `<span class="label">Dedication:</span> ${temple.dedicated}`;
+            area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
             img.setAttribute("src", temple.imageUrl);
             img.setAttribute("alt", `${temple.templeName} Temple`);
             img.setAttribute("loading", "lazy");
-
+    
             card.appendChild(name);
             card.appendChild(location);
             card.appendChild(dedication);
             card.appendChild(area);
             card.appendChild(img);
-
+    
             container.appendChild(card);
-        })
+        });
       }
 
 
