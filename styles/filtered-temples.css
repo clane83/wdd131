@@ -94,19 +94,19 @@ h2 {
     text-align: center;
 }
 
-figure {
+#temples-container {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
 }
-img{ 
+.temple-card{ 
     width: 100%;
     height: auto;
     margin: .5rem;
 }
-figcaption {
+/* figcaption {
     font-size: smaller;
     text-align: center;
-}
+} */
 
 footer{
     grid-column: 1 / 4;
