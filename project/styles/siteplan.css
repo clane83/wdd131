@@ -33,6 +33,27 @@ div:last-child{
     border-bottom: 2px var(--font-color) solid;
 }
 
+figure {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    padding: .05rem;
+
+
+}
+
+img{ 
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    margin: .5rem;
+}
+figcaption {
+    grid-row: 2;
+    font-size: smaller;
+    text-align: center;
+}
+
 footer {
     color: var(--font-color);
     text-align: center;
