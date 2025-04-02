@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - forms</title>
+    <meta name="description" content="christina lane, WDD 131 Dynamic Web Fundamentals">
+    <meta name="author" content="Christina Lane">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="form">
+            <fieldset>
+                <label>Product Name
+                    <select name="products" id="product" required>
+                        <option value="">Select a Product ... &#9662;</option>
+                    </select>
+                    <script src="scripts/form.js" defer></script>
+        <!--radio button-->
+                <div>Overall Rating</div>
+                <label><input type="radio" id="rating1" name="rating" value="1star" required>&star;</label>
+                <label><input type="radio" id="rating2" name="rating" value="2star">&star;&star;</label>
+                <label><input type="radio" id="rating3" name="rating" value="3star">&star;&star;&star;</label>
+                <label><input type="radio" id="rating4" name="rating" value="4star">&star;&star;&star;&star;</label>
+                <label><input type="radio" id="rating5" name="rating" value="5star">&star;&star;&star;&star;&star;</label>
+        <!-- date -->
+                <label>Date of Installation<input type="date" id="" name="completeDate" required></label>
+        <!-- checkbox -->
+                <div>Which features did you find userful in the product?</div>
+                <label><input type="checkbox" name="durable" value="yes">Durability</label>
+                <label><input type="checkbox" name="ease" value="yes">Ease of Use</label>
+                <label><input type="checkbox" name="performance" value="yes">Performance</label>
+                <label><input type="checkbox" name="design" value="yes">Design</label>
+        <!-- Written Review -->
+                <label>Written Review<input type="textarea" id="review" name="review"></label>
+        <!-- username -->
+                <label>Your Name<input type="text" id="name" name="fname"></label>
+        <!-- submit button -->       
+                <input type="submit" value="Post Review">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>
+            © <span id="currentYear"></span> Christina Lane United States of America
+        </p>
+        <p id="lastModified">
+        </p>
+    </footer>
+    <script src="scripts/form.js" defer></script>
+    
+</body>
+</html>
