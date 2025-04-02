@@ -97,7 +97,7 @@ h1{
     padding: 1%;
 }
 
-.form [type="textarea"]
+.form textarea
 {
     display: block;
     width: 93%;
