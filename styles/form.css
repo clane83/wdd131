@@ -1,2 +1,121 @@
 /* https://coolors.co/989788-51344d-6f5060-a78682-e7ebc5 */
 
+:root {
+    --font-color: #989788;
+    --form-background-color: #A78682;
+    --large-font-size: 600;
+    --small-font-size: 400;
+    font-family: Montserrat, serif;
+
+}
+
+h1{
+    background-color: #51344D;
+    color: #989788;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+}
+/*----------- FORM STYLING --------------*/
+
+
+
+/* .form{
+    background: var(--form-background-color);
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    
+    
+} */
+
+.form fieldset {
+    background: var(--form-background-color);
+    /* display: block; */
+    border: none !important;
+    box-shadow: none;
+    width: 100%;
+    max-width: 400px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.form label, div {
+    text-align: left;
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: .25rem;
+    font-weight: var(--large-font-size);
+
+}
+
+.form select
+{
+    display: block;
+    width: 95%;
+    max-width: 300px;
+    appearance: none;
+    padding: .75rem;
+    margin-bottom: .2rem;
+}
+
+.form [type="date"],
+.form [type="text"] 
+{
+    display: block;
+    width: 93%;
+    max-width: 275px;
+    padding: .75rem;
+    margin-bottom: .2rem;
+}
+.rating-container {
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rating-label{
+    font-weight: var(--large-font-size);
+    white-space: nowrap;
+    margin-bottom: -1rem;
+}
+
+.rating-options{
+    display: flex;
+    gap: .5rem;
+    padding-top: 0;
+}
+
+
+.feature-label{
+    margin-bottom: -1rem;
+    padding-top: 0;
+}
+
+.feature-checkbox label{
+    padding: 1%;
+}
+
+.form [type="textarea"]
+{
+    display: block;
+    width: 93%;
+    max-width: 275px;
+    padding: .75rem;
+    height: 100px;
+    text-align: top left;
+
+}
+
+.form [type="submit"]
+{
+    width: 100%;
+    max-width: 300px;
+    appearance: none;
+    padding: .75rem;
+}
+
+.wf1 input:required {
+    border-left: solid 8px red;
+}

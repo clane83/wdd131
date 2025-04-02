@@ -18,27 +18,35 @@
     <main>
         <form method="get" action="review.html" class="form">
             <fieldset>
-                <label>Product Name
+                <label>Product Names</label> 
                     <select name="products" id="product" required>
                         <option value="">Select a Product ... &#9662;</option>
                     </select>
                     <script src="scripts/form.js" defer></script>
         <!--radio button-->
-                <div>Overall Rating</div>
-                <label><input type="radio" id="rating1" name="rating" value="1star" required>&star;</label>
-                <label><input type="radio" id="rating2" name="rating" value="2star">&star;&star;</label>
-                <label><input type="radio" id="rating3" name="rating" value="3star">&star;&star;&star;</label>
-                <label><input type="radio" id="rating4" name="rating" value="4star">&star;&star;&star;&star;</label>
-                <label><input type="radio" id="rating5" name="rating" value="5star">&star;&star;&star;&star;&star;</label>
+            <div class="rating-container">
+                <div class="rating-label">Overall Rating</div>
+                <div class="rating-options">
+                    <label><input type="radio" id="rating1" name="rating" value="1star" required>&star;</label>
+                    <label><input type="radio" id="rating2" name="rating" value="2star">&star;&star;</label>
+                    <label><input type="radio" id="rating3" name="rating" value="3star">&star;&star;&star;</label>
+                    <label><input type="radio" id="rating4" name="rating" value="4star">&star;&star;&star;&star;</label>
+                    <label><input type="radio" id="rating5" name="rating" value="5star">&star;&star;&star;&star;&star;</label>
+                </div>
+            </div>
         <!-- date -->
-                <label>Date of Installation<input type="date" id="" name="completeDate" required></label>
+                <label>Date of Installation<input type="date" id="date" name="completeDate" required></label>
         <!-- checkbox -->
-                <div>Which features did you find userful in the product?</div>
-                <label><input type="checkbox" name="durable" value="yes">Durability</label>
-                <label><input type="checkbox" name="ease" value="yes">Ease of Use</label>
-                <label><input type="checkbox" name="performance" value="yes">Performance</label>
-                <label><input type="checkbox" name="design" value="yes">Design</label>
-        <!-- Written Review -->
+                <div class="feature-container"></div>
+                    <div class="feature-label">Which features did you find userful in the product?</div>
+                    <div class="feature-checkbox">
+                        <label><input type="checkbox" name="durable" value="yes">Durability</label>
+                        <label><input type="checkbox" name="ease" value="yes">Ease of Use</label>
+                        <label><input type="checkbox" name="performance" value="yes">Performance</label>
+                        <label><input type="checkbox" name="design" value="yes">Design</label>
+                    </div>
+                </div>
+                <!-- Written Review -->
                 <label>Written Review<input type="textarea" id="review" name="review"></label>
         <!-- username -->
                 <label>Your Name<input type="text" id="name" name="fname"></label>
