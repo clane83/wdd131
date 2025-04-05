@@ -27,7 +27,7 @@
 
       }
       .movie-card p:last-of-type {
-        height: 50px;
+        height: 60px;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
