@@ -86,19 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Add more movies objects here...
       ];
 
-    const oldmovieLink = document.querySelector("#oldmovie");
-    const newmovieLink = document.querySelector("#newmovie");
 
-    oldmovieLink.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        const oldmovies = movies.filter(movie => {
-            const year = parseInt(movie.yearReleased);
-            return year < 2025;
-        });
-            
-        createMovieCard(oldmovies);
-    });
 
     function createMovieCard(filteredMovies) {
         const container = document.getElementById("movies-container");
@@ -143,6 +131,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Load all movies by default
-    createMovieCard(movies);
+    
+    
+    // Check for filter query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const filter = urlParams.get("filter");
+
+    //check filter value and create movie cards based on old filter
+    if (filter === "old") {
+        const oldMovies = movies.filter(movie => parseInt(movie.yearReleased) < 2025);
+        createMovieCard(oldMovies);
+    //check filter value and create movie cards based on new filter
+    } else if (filter == "new") {
+        const newMovies = movies.filter(movie => parseInt(movie.yearReleased) >= 2025);
+        createMovieCard(newMovies);
+    } else {
+        // Load all movies by default if no filter is applied
+        const moviesContainer = document.getElementById("movies-container");
+        if (moviesContainer) {
+            createMovieCard(movies);
+        }
+    }
 });
