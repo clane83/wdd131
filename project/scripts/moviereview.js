@@ -89,21 +89,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const oldmovieLink = document.querySelector("#oldmovie");
     const newmovieLink = document.querySelector("#newmovie");
 
-    if (oldmovieLink && newmovieLink) {
-        oldmovieLink.addEventListener("click", (event) => {
-            event.preventDefault();
-            const oldMovies = movies.filter(movie => parseInt(movie.yearReleased) < 2025);
-            createMovieCard(oldMovies);
-        });
+    oldmovieLink.addEventListener("click", (event) => {
+        event.preventDefault();
 
-        newmovieLink.addEventListener("click", (event) => {
-            event.preventDefault();
-            const newMovies = movies.filter(movie => parseInt(movie.yearReleased) >= 2025);
-            createMovieCard(newMovies);
+        const oldmovies = movies.filter(movie => {
+            const year = parseInt(movie.yearReleased);
+            return year < 2025;
         });
-    } else {
-        console.warn("Filter buttons not found in the document.");
-    }
+            
+        createMovieCard(oldmovies);
+    });
 
     function createMovieCard(filteredMovies) {
         const container = document.getElementById("movies-container");
@@ -122,8 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const button = document.createElement("button");
 
             name.textContent = movie.movieTitle;
-            year.textContent = `Year: ${movie.yearReleased}`;
-            description.textContent = `Description: ${movie.movieDescription}`;
+            year.innerHTML = `Year: ${movie.yearReleased}`;
+            description.innerHTML = `Description: ${movie.movieDescription}`;
             img.setAttribute("src", movie.imageURL);
             img.setAttribute("alt", `${movie.movieTitle} Poster`);
 
