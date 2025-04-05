@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
             textarea.rows = 5;
             textarea.cols = 30;
             
-
+            button.textContent = "Complete Review";
             
 
             card.appendChild(name);
