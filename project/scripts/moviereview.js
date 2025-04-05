@@ -83,6 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
             imageURL:
             "images/wildrobot.jpg"
         },
+        {
+            movieTitle: "A Minecraft Movie",
+            yearReleased: "2025",
+            movieDescription: "Four misfits are suddenly pulled through a mysterious portal into a bizarre, cubic wonderland that thrives on imagination. To get back home, they'll have to master this world while embarking on a quest with an unexpected, expert crafter.",
+            released: "Yes",
+            imageURL:
+            "images/minecraft.jpg"
+        },
         // Add more movies objects here...
       ];
 
