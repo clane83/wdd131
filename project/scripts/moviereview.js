@@ -15,48 +15,55 @@ document.addEventListener("DOMContentLoaded", () => {
             movieTitle: "Karate Kid Ledgend",
             yearReleased: "2025",
             released: "No",
+            movieDescription: "",
             imageURL:
-            "images/karatekidledgend.png"
+            "images/karatekidledgend.jpg"
         },
         {
-            movieTitle: "Karate of Kings",
+            movieTitle: "King of Kings",
             yearReleased: "2025",
             released: "No",
+            movieDescription: "",
             imageURL:
-            "images/kingofkings.png"
+            "images/kingofkings.jpg"
         },
         {
             movieTitle: "Last Rodeo",
             yearReleased: "2025",
             released: "No",
+            movieDescription: "To save his grandson, a retired rodeo star enters a high-stakes bull-riding competition. Along the way, he confronts his past, discovers faith, and proves that true courage lies in family.",
             imageURL:
-            "images/lastrodeo.png"
+            "images/lastrodeo.jpg"
         },
         {
             movieTitle: "Lilo and Stitch",
             yearReleased: "2025",
             released: "No",
+            movieDescription: "",
             imageURL:
-            "images/liloandstitch.png"
+            "images/liloandstitch.jpeg"
         },
         {
             movieTitle: "Little Mermaid",
             yearReleased: "2023",
             released: "Yes",
+            movieDescription: "",
             imageURL:
-            "images/littlemermaid.png"
+            "images/littlemermaid.jpg"
         },
         {
             movieTitle: "Moana 2",
             yearReleased: "2025",
             released: "Yes",
+            movieDescription: "",
             imageURL:
-            "images/moana2.png"
+            "images/moana2.jpg"
         },
         {
             movieTitle: "Mufasa",
             yearReleased: "2024",
             released: "Yes",
+            movieDescription: "",
             imageURL:
             "images/mufasa.png"
         },
@@ -64,12 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
             movieTitle: "Twisters",
             yearReleased: "2024",
             released: "Yes",
+            movieDescription: "",
             imageURL:
             "images/twisters.png"
         },
         {
             movieTitle: "Wild Robot",
             yearReleased: "2024",
+            movieDescription: "",
             released: "Yes",
             imageURL:
             "images/wildrobot.png"
@@ -100,21 +109,42 @@ document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById("movies-container");
         container.innerHTML = ""; // Clear existing content
 
+        
+
         filteredMovies.forEach(movie => {
-            const card = document.createElement("section");
+            let card = document.createElement("section");
+            card.classList.add("movie-card"); //adds class to the card
             const name = document.createElement("h3");
             const year = document.createElement("p");
+            const description = document.createElement("p")
             const img = document.createElement("img");
+            const textarea = document.createElement("textarea");
+            const button = document.createElement("button");
 
             name.textContent = movie.movieTitle;
             year.textContent = `Year: ${movie.yearReleased}`;
+            description.textContent = `Description: ${movie.movieDescription}`;
             img.setAttribute("src", movie.imageURL);
             img.setAttribute("alt", `${movie.movieTitle} Poster`);
 
+
+
+            //creat textarea and button
+            textarea.placeholder = "Write your review here...";
+            textarea.rows = 5;
+            textarea.cols = 30;
+            
+
+            
+
             card.appendChild(name);
             card.appendChild(year);
+            card.appendChild(description);
             card.appendChild(img);
+            card.appendChild(textarea);
+            card.appendChild(button);
             container.appendChild(card);
+
         });
     }
 

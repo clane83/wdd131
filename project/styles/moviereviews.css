@@ -1,0 +1,51 @@
+body {
+    display: grid;
+    grid-template: auto auto auto / auto auto auto;
+}
+
+header {
+    grid-column: 1/4;
+}
+
+main {
+    width: 90%; /* Use 90% of the viewport width */
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the main container */
+}
+
+#movies-container {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+.movie-card{ 
+    width: 100%;
+    height: auto;
+    margin: .5rem;
+    padding: 1.5rem;
+}
+  
+
+.movie-card img {
+    display: block;
+    width: 100%; 
+    height: auto; 
+    max-width: 500px; 
+    
+    
+}
+
+.movie-card textarea {
+    width: 100%; 
+    height: auto;
+    margin-top: 1rem; 
+}
+
+footer {
+    grid-column: 1 / 4;
+    font-size: small;
+    text-align: center;
+    padding-top: 2rem;
+}
