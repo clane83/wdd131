@@ -5,8 +5,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 1rem;
-        margin-left: 5rem;
-        margin-right: 5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
       }
 
       .movie-card {
@@ -26,7 +26,12 @@
         text-align: center;
 
       }
-
+      .movie-card p:last-of-type {
+        height: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+        }
     
       .movie-card img{
         display: block;
