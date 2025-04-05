@@ -1,10 +1,26 @@
+:root{
+    --font-family: "Roboto", sans-serif;
+    --font-weight: 400;
+    --small-font-weight: 200;
+    --background-color: #DB5461;
+    --navigation-background: #AAACB0;
+    --font-color: #002A32;
+    --alt-background: #F8E16C;
+
+}
+
 body {
+    font-family: var(--font-family);
     display: grid;
     grid-template: auto auto auto / auto auto auto;
 }
 
 header {
     grid-column: 1/4;
+}
+
+h1 {
+    text-align: center;;
 }
 
 main {
