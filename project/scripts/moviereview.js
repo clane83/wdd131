@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const movies = [
         {
-            movieTitle: "Karate Kid Ledgend",
+            movieTitle: "Karate Kid Legends",
             yearReleased: "2025",
             released: "No",
-            movieDescription: "",
+            movieDescription: "After kung fu prodigy Li Fong relocates to New York City, he attracts unwanted attention from a local karate champion and embarks on a journey to enter the ultimate karate competition with the help of Mr. Han and Daniel LaRusso.",
             imageURL:
             "images/karatekidledgend.jpg"
         },
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             movieTitle: "King of Kings",
             yearReleased: "2025",
             released: "No",
-            movieDescription: "",
+            movieDescription: "The story of our Lord Jesus Christ as told by Charles Dickens and seen through the innocent eyes of a child.",
             imageURL:
             "images/kingofkings.jpg"
         },
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             movieTitle: "Lilo and Stitch",
             yearReleased: "2025",
             released: "No",
-            movieDescription: "",
+            movieDescription: "A lonely Hawaiian girl befriends a runaway alien, helping to heal her fragmented family.",
             imageURL:
             "images/liloandstitch.jpeg"
         },
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
             movieTitle: "Little Mermaid",
             yearReleased: "2023",
             released: "Yes",
-            movieDescription: "",
+            movieDescription: "A young mermaid makes a deal with a sea witch to trade her beautiful voice for human legs so she can discover the world above water and impress a prince.",
             imageURL:
             "images/littlemermaid.jpg"
         },
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             movieTitle: "Moana 2",
             yearReleased: "2025",
             released: "Yes",
-            movieDescription: "",
+            movieDescription: "After receiving an unexpected call from her wayfinding ancestors, Moana must journey to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
             imageURL:
             "images/moana2.jpg"
         },
@@ -63,25 +63,25 @@ document.addEventListener("DOMContentLoaded", () => {
             movieTitle: "Mufasa",
             yearReleased: "2024",
             released: "Yes",
-            movieDescription: "",
+            movieDescription: "Mufasa, a cub lost and alone, meets a sympathetic lion named Taka, the heir to a royal bloodline. The chance meeting sets in motion an expansive journey of a group of misfits searching for their destiny.",
             imageURL:
-            "images/mufasa.png"
+            "images/mufasa.jpg"
         },
         {
             movieTitle: "Twisters",
             yearReleased: "2024",
             released: "Yes",
-            movieDescription: "",
+            movieDescription: "Kate Carter, a retired tornado-chaser and meteorologist, is persuaded to return to Oklahoma to work with a new team and new technologies.",
             imageURL:
-            "images/twisters.png"
+            "images/twisters.jpg"
         },
         {
             movieTitle: "Wild Robot",
             yearReleased: "2024",
-            movieDescription: "",
+            movieDescription: "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
             released: "Yes",
             imageURL:
-            "images/wildrobot.png"
+            "images/wildrobot.jpg"
         },
         // Add more movies objects here...
       ];
