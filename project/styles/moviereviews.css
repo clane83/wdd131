@@ -70,6 +70,33 @@ main {
 
 }
 
+.coming-soon-movies, .recently-released-movies {
+    display: block;
+    border: solid 2px var(--font-color);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+
+}
+.coming-soon-movies h2, .recently-released-movies h2 {
+    text-align: center;
+    margin: auto;
+
+}
+.coming-soon-movies h3, .recently-released-movies h3 {
+    text-align: center;
+    margin: auto;
+    padding-top: 2rem;
+}
+.coming-soon-movies img, .recently-released-movies img {
+    display:block;
+    height: auto;
+    width: 100%;
+    margin: auto;
+}
+
+
+
 footer {
     grid-column: 1 / 4;
     font-size: small;

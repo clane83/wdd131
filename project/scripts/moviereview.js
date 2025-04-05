@@ -131,6 +131,58 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+//coming soon movie container used on index.html
+
+    function createComingSoonMovieCard(filteredMovies) {
+        const container = document.getElementById("coming-soon-movies-container");
+        container.innerHTML = ""; // Clear existing content
+
+        
+
+        filteredMovies.forEach(movie => {
+            let card = document.createElement("section");
+            card.classList.add("coming-soon"); //adds class to the card
+            const name = document.createElement("h3");
+            const img = document.createElement("img");
+            
+
+            name.textContent = movie.movieTitle;
+            img.setAttribute("src", movie.imageURL);
+            img.setAttribute("alt", `${movie.movieTitle} Poster`);
+
+            card.appendChild(name);
+            card.appendChild(img);
+            container.appendChild(card);
+
+        });
+    }
+
+//recently released movie container used on index.html
+
+    function createRecentMovieCard(filteredMovies) {
+        const container = document.getElementById("recent-movies-container");
+        container.innerHTML = ""; // Clear existing content
+
+        
+
+        filteredMovies.forEach(movie => {
+            let card = document.createElement("section");
+            card.classList.add("recent-movies"); //adds class to the card
+            const name = document.createElement("h3");
+            const img = document.createElement("img");
+            
+
+            name.textContent = movie.movieTitle;
+            img.setAttribute("src", movie.imageURL);
+            img.setAttribute("alt", `${movie.movieTitle} Poster`);
+
+            card.appendChild(name);
+            card.appendChild(img);
+            container.appendChild(card);
+
+        });
+    }
+
     
     
     // Check for filter query parameter
@@ -145,6 +197,13 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (filter == "new") {
         const newMovies = movies.filter(movie => parseInt(movie.yearReleased) >= 2025);
         createMovieCard(newMovies);
+    } else if (filter == "comingsoon") {
+        const comingSoonMovies = movies.filter(movie => movie.released == "No");
+        createMovieCard(comingSoonMovies);
+    } else if (filter == "recent"){
+        const recentlyReleasedMovies = movies.filter(movie => parseInt(movie.yearReleased) === 2025 && movie.released === "Yes");
+        createMovieCard(recentlyReleasedMovies);
+    
     } else {
         // Load all movies by default if no filter is applied
         const moviesContainer = document.getElementById("movies-container");
@@ -152,4 +211,10 @@ document.addEventListener("DOMContentLoaded", () => {
             createMovieCard(movies);
         }
     }
+
+    const comingSoonMovies = movies.filter(movie => movie.released == "No");
+        createComingSoonMovieCard(comingSoonMovies);
+
+    const recentMovies = movies.filter(movie => parseInt(movie.yearReleased) === 2025 && movie.released === "Yes");
+        createRecentMovieCard(recentMovies);
 });
