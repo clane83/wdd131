@@ -27,9 +27,14 @@
 
       }
       .movie-card p:last-of-type {
-        height: 100px;
+        height: 50px;
         overflow: hidden;
         text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        
         
         }
     
@@ -39,5 +44,18 @@
         height: auto;
         max-width: 300px;
         margin: 0 auto;
+        padding-bottom: 1rem;
+      }
+
+      .movie-card button {
+        margin-bottom: 1rem;
+        /* margin-top: auto; */
+      }
+
+      .movie-card textarea {
+        margin-bottom: 1rem;
+        margin-top: auto;
+        
+        
       }
 }
