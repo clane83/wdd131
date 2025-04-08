@@ -10,6 +10,22 @@ document.addEventListener("DOMContentLoaded", () => {
         hamButton.classList.toggle("open");
     });
 
+    const reasons = [
+        { id: "1", name: "Movie has the wrong description"},
+        { id: "2", name: "Movie has the wrong release date" },
+        { id: "3", name: "Request to add a feature"}
+    ];
+    const reasonSelect = document.getElementById("reason");
+        reasons.forEach( reason => {
+            const option = document.createElement("option");
+            option.value = reason.id;
+            option.textContent = reason.name;
+            reasonSelect.appendChild(option);
+
+        });
+    });
+document.addEventListener("DOMContentLoaded", () => {
+
     const movies = [
         {
             movieTitle: "Karate Kid Legends",
@@ -266,43 +282,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const favoriteMovies = movies.filter(movie => movie.staffFavorites === "Yes");
         createFavoriteMovieCard(favoriteMovies);
 
-
-        
-    const reasons = [
-        {
-        id: "fc-1888",
-        name: "Movie has the wrong description",
-        averagerating: 4.5
-        },
-        {
-        id: "fc-2050",
-        name: "power laces",
-        averagerating: 4.7
-        },
-        {
-        id: "fs-1987",
-        name: "time circuits",
-        averagerating: 3.5
-        },
-        {
-        id: "ac-2000",
-        name: "low voltage reactor",
-        averagerating: 3.9
-        },
-        {
-        id: "jj-1969",
-        name: "warp equalizer",
-        averagerating: 5.0
-            }
-    ];
-    const reasonSelect = document.getElementById("reason");
-        reasons.forEach( reason => {
-            const option = document.createElement("option");
-            option.value = reason.id;
-            option.textContent = reason.name;
-            reasonSelect.appendChild(option);
-
-        });
     
 
 
