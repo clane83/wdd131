@@ -184,7 +184,8 @@ main {
 }
 
 .form [type="date"],
-.form [type="text"] 
+.form [type="text"],
+.form [type="email"]
 {
     display: block;
     width: 93%;
