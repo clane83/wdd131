@@ -10,27 +10,32 @@
     <meta name="author" content="Christina Lane">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Review a Movie</h1>
+        <h1>Movie Release</h1>
         <button id="menu"></button>
         <nav>
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="moviereviews.html">Movie Reviews</a></li>
+                <li><a href="movierelease.html">Movies</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
             </ul>
         </nav>     
     </header>
     <main>
         <section class="coming-soon-movies">
-            <h2><a href="moviereviews.html?filter=comingsoon" id="comingsoonmovie">Coming Soon</a></h2>
+            <h2><a href="movierelease.html?filter=comingsoon" id="comingsoonmovie">Coming Soon</a></h2>
             <div class="movie-row" id="coming-soon-movies-container"></div>
         </section>
         <section class="recently-released-movies">
-            <h2><a href="moviereviews.html?filter=recent" id="recentlyreleasedmovies">Recently Released</a></h2>
+            <h2><a href="movierelease.html?filter=recent" id="recentlyreleasedmovies">Recently Released</a></h2>
             <div class="movie-row" id="recent-movies-container"></div>
+        </section>
+        <section class="staff-favorite-movies">
+            <h2><a href="movierelease.html?filter=favorite" id="favoritemovies">Staff Top Picks of the Week</a></h2>
+            <div class="movie-row" id="favorite-movies-container"></div>
         </section>
        
     </main>
@@ -44,6 +49,6 @@
             <a href="reference.html">References</a>
         </p>
     </footer>
-    <script src="scripts/moviereview.js" defer></script>
+    <script src="scripts/movierelease.js" defer></script>
 </body>
 </html>

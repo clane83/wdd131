@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/moviereviews.css">
+    <link rel="stylesheet" href="styles/moviereviews-large.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - project</title>
+    <meta name="description" content="christina lane, WDD 131 Dynamic Web Fundamentals">
+    <meta name="author" content="Christina Lane">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Movie Reviewss</h1>
+        <button id="menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movierelease.html">Movies</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>     
+    </header>
+    <main>
+        <h2>Contact Us</h2>
+        <form method="get" action="review.html" class="form"> <!--change review.html-->
+            <fieldset>
+                <label>Reason for Contacting Us</label> 
+                    <select name="reasons" id="reason" required>
+                        <option value="">Select a Product ... &#9662;</option>
+                    </select>
+                    <!-- <script src="scripts/movierelease.js" defer></script> -->
+        <!--radio button-->
+            <div class="rating-container">
+                <div class="rating-label">Overall Rating</div>
+                <div class="rating-options">
+                    <label><input type="radio" id="rating1" name="rating" value="1star" required>&star;</label>
+                    <label><input type="radio" id="rating2" name="rating" value="2star">&star;&star;</label>
+                    <label><input type="radio" id="rating3" name="rating" value="3star">&star;&star;&star;</label>
+                    <label><input type="radio" id="rating4" name="rating" value="4star">&star;&star;&star;&star;</label>
+                    <label><input type="radio" id="rating5" name="rating" value="5star">&star;&star;&star;&star;&star;</label>
+                </div>
+            </div>
+        <!-- date -->
+                <label>Date of Installation<input type="date" id="date" name="completeDate" required></label>
+        <!-- checkbox -->
+                <div class="feature-container">
+                    <div class="feature-label">Which features did you find userful in the product?</div>
+                    <div class="feature-checkbox">
+                        <label><input type="checkbox" name="durable" value="yes">Durability</label>
+                        <label><input type="checkbox" name="ease" value="yes">Ease of Use</label>
+                        <label><input type="checkbox" name="performance" value="yes">Performance</label>
+                        <label><input type="checkbox" name="design" value="yes">Design</label>
+                    </div>
+                </div>
+                <!-- Written Review -->
+                <label>Written Review</label>
+                <textarea id="review" name="review" placeholder="Write your review..."></textarea>
+        <!-- username -->
+                <label>Your Name<input type="text" id="name" name="fname"></label>
+        <!-- submit button -->       
+                <input type="submit" value="Post Review">
+            </fieldset>
+        </form>
+
+    </main>
+    <footer>
+        <p>
+            © <span id="currentYear"></span> Christina Lane United States of America
+        </p>
+        <p id="lastModified">
+        </p>
+        <p>
+            <a href="reference.html">References</a>
+        </p>
+    </footer>
+    <script src="scripts/movierelease.js" defer></script>
+</body>
+</html>

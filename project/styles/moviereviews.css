@@ -3,7 +3,7 @@
     --font-weight: 400;
     --small-font-weight: 200;
     --background-color: #DB5461;
-    --navigation-background: #AAACB0;
+    --navigation-hover: #AAACB0;
     --font-color: #002A32;
     --alt-background: #F8E16C;
 
@@ -11,16 +11,71 @@
 
 body {
     font-family: var(--font-family);
+    color: var(--font-color);
     display: grid;
     grid-template: auto auto auto / auto auto auto;
+    
 }
 
 header {
     grid-column: 1/4;
+    background-color: var(--background-color);
+}
+
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: var(--font-color);
+    cursor: pointer;
+ 	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.navigation {
+    display: none; /* Ensure the navigation items are arranged horizontally */
+    flex-direction: column;
+    list-style: none;
+    padding: 0; /* Remove any default padding */
+    align-items: center;
+    font-size: medium;
+    
+
+}
+
+.navigation.open{
+    display: flex;
+    margin-right: 5px;
+}
+
+.navigation a{
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--font-color);
+    align-items: center;
+}
+
+li a:hover{
+    color: var(--navigation-hover);
+}
+
+.open a {
+    display: block;
 }
 
 h1 {
-    text-align: center;;
+    text-align: center;
 }
 
 main {
@@ -70,7 +125,7 @@ main {
 
 }
 
-.coming-soon-movies, .recently-released-movies {
+.coming-soon-movies, .recently-released-movies, .staff-favorite-movies {
     display: block;
     border: solid 2px var(--font-color);
     padding: 1rem;
@@ -78,28 +133,122 @@ main {
     border-radius: 8px;
 
 }
-.coming-soon-movies h2, .recently-released-movies h2 {
+.coming-soon-movies h2, .recently-released-movies h2, .staff-favorite-movies h2 {
     text-align: center;
     margin: auto;
 
 }
-.coming-soon-movies h3, .recently-released-movies h3 {
+.coming-soon-movies h3, .recently-released-movies h3, .staff-favorite-movies h3 {
     text-align: center;
     margin: auto;
     padding-top: 2rem;
 }
-.coming-soon-movies img, .recently-released-movies img {
+.coming-soon-movies img, .recently-released-movies img, .staff-favorite-movies img {
     display:block;
     height: auto;
     width: 100%;
     margin: auto;
 }
 
+/*----------- FORM STYLING --------------*/
 
+
+.form fieldset {
+    background: var(--form-background-color);
+    /* display: block; */
+    border: none !important;
+    box-shadow: none;
+    width: 100%;
+    max-width: 400px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.form label, div {
+    text-align: left;
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: .25rem;
+    font-weight: var(--large-font-size);
+
+}
+
+.form select
+{
+    display: block;
+    width: 95%;
+    max-width: 300px;
+    appearance: none;
+    padding: .75rem;
+    margin-bottom: .2rem;
+}
+
+.form [type="date"],
+.form [type="text"] 
+{
+    display: block;
+    width: 93%;
+    max-width: 275px;
+    padding: .75rem;
+    margin-bottom: .2rem;
+}
+.rating-container {
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rating-label{
+    font-weight: var(--large-font-size);
+    white-space: nowrap;
+    margin-bottom: -1rem;
+}
+
+.rating-options{
+    display: flex;
+    gap: .5rem;
+    padding-top: 0;
+}
+
+
+.feature-label{
+    margin-bottom: -1rem;
+    padding-top: 0;
+}
+
+.feature-checkbox label{
+    padding: 1%;
+}
+
+.form textarea
+{
+    display: block;
+    width: 93%;
+    max-width: 275px;
+    padding: .75rem;
+    height: 100px;
+
+}
+
+.form [type="submit"]
+{
+    width: 100%;
+    max-width: 300px;
+    appearance: none;
+    padding: .75rem;
+}
+
+.wf1 input:required {
+    border-left: solid 8px red;
+}
+
+
+/*----------- FOOTER STYLING --------------*/
 
 footer {
     grid-column: 1 / 4;
     font-size: small;
     text-align: center;
     padding-top: 2rem;
+    background-color: var(--background-color);
 }

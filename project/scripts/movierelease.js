@@ -13,84 +13,103 @@ document.addEventListener("DOMContentLoaded", () => {
     const movies = [
         {
             movieTitle: "Karate Kid Legends",
-            yearReleased: "2025",
+            dateReleased: "May 30, 2025",
             released: "No",
+            staffFavorites: "No",
             movieDescription: "After kung fu prodigy Li Fong relocates to New York City, he attracts unwanted attention from a local karate champion and embarks on a journey to enter the ultimate karate competition with the help of Mr. Han and Daniel LaRusso.",
             imageURL:
             "images/karatekidledgend.jpg"
         },
         {
             movieTitle: "King of Kings",
-            yearReleased: "2025",
+            dateReleased: "April 11, 2025",
             released: "No",
+            staffFavorites: "No",
             movieDescription: "The story of our Lord Jesus Christ as told by Charles Dickens and seen through the innocent eyes of a child.",
             imageURL:
             "images/kingofkings.jpg"
         },
         {
             movieTitle: "Last Rodeo",
-            yearReleased: "2025",
+            dateReleased: "May 23, 2025",
             released: "No",
+            staffFavorites: "No",
             movieDescription: "To save his grandson, a retired rodeo star enters a high-stakes bull-riding competition. Along the way, he confronts his past, discovers faith, and proves that true courage lies in family.",
             imageURL:
             "images/lastrodeo.jpg"
         },
         {
             movieTitle: "Lilo and Stitch",
-            yearReleased: "2025",
+            dateReleased: "May 23, 2025",
             released: "No",
+            staffFavorites: "No",
             movieDescription: "A lonely Hawaiian girl befriends a runaway alien, helping to heal her fragmented family.",
             imageURL:
             "images/liloandstitch.jpeg"
         },
         {
             movieTitle: "Little Mermaid",
-            yearReleased: "2023",
+            dateReleased: "May 28, 2023",
             released: "Yes",
+            staffFavorites: "No",
             movieDescription: "A young mermaid makes a deal with a sea witch to trade her beautiful voice for human legs so she can discover the world above water and impress a prince.",
             imageURL:
             "images/littlemermaid.jpg"
         },
         {
             movieTitle: "Moana 2",
-            yearReleased: "2025",
+            dateReleased: "December 1, 2024",
             released: "Yes",
+            staffFavorites: "Yes",
             movieDescription: "After receiving an unexpected call from her wayfinding ancestors, Moana must journey to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
             imageURL:
             "images/moana2.jpg"
         },
         {
-            movieTitle: "Mufasa",
-            yearReleased: "2024",
+            movieTitle: "Mufasa: The Lion King",
+            dateReleased: "December 22, 2024",
             released: "Yes",
+            staffFavorites: "No",
             movieDescription: "Mufasa, a cub lost and alone, meets a sympathetic lion named Taka, the heir to a royal bloodline. The chance meeting sets in motion an expansive journey of a group of misfits searching for their destiny.",
             imageURL:
             "images/mufasa.jpg"
         },
         {
             movieTitle: "Twisters",
-            yearReleased: "2024",
+            dateReleased: "July 21, 2024",
             released: "Yes",
+            staffFavorites: "Yes",
             movieDescription: "Kate Carter, a retired tornado-chaser and meteorologist, is persuaded to return to Oklahoma to work with a new team and new technologies.",
             imageURL:
             "images/twisters.jpg"
         },
         {
             movieTitle: "Wild Robot",
-            yearReleased: "2024",
+            dateReleased: "September 29, 2024",
             movieDescription: "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
             released: "Yes",
+            staffFavorites: "Yes",
             imageURL:
             "images/wildrobot.jpg"
         },
         {
             movieTitle: "A Minecraft Movie",
-            yearReleased: "2025",
+            dateReleased: "April 4, 2025",
             movieDescription: "Four misfits are suddenly pulled through a mysterious portal into a bizarre, cubic wonderland that thrives on imagination. To get back home, they'll have to master this world while embarking on a quest with an unexpected, expert crafter.",
             released: "Yes",
+            staffFavorites: "No",
             imageURL:
             "images/minecraft.jpg"
         },
+        {
+            movieTitle: "Captain America: Brave New World",
+            dateReleased: "February 16, 2025",
+            movieDescription: "Sam Wilson, the new Captain America, finds himself in the middle of an international incident and must discover the motive behind a nefarious global plan.",
+            released: "Yes",
+            staffFavorites: "Yes",
+            imageURL:
+            "images/captain-america.jpg"
+        }
         // Add more movies objects here...
       ];
 
@@ -109,31 +128,19 @@ document.addEventListener("DOMContentLoaded", () => {
             const year = document.createElement("p");
             const description = document.createElement("p")
             const img = document.createElement("img");
-            const textarea = document.createElement("textarea");
-            const button = document.createElement("button");
 
             name.textContent = movie.movieTitle;
-            year.innerHTML = `Year: ${movie.yearReleased}`;
+            year.innerHTML = `Date: ${movie.dateReleased}`;
             description.innerHTML = `Description: ${movie.movieDescription}`;
             img.setAttribute("src", movie.imageURL);
             img.setAttribute("alt", `${movie.movieTitle} Poster`);
 
-
-
-            //creat textarea and button
-            textarea.placeholder = "Write your review here...";
-            textarea.rows = 5;
-            textarea.cols = 30;
-            
-            button.textContent = "Complete Review";
             
 
             card.appendChild(name);
             card.appendChild(year);
             card.appendChild(description);
             card.appendChild(img);
-            card.appendChild(textarea);
-            card.appendChild(button);
             container.appendChild(card);
 
         });
@@ -191,6 +198,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+//staff favorites movie container used on index.html
+
+    function createFavoriteMovieCard(filteredMovies) {
+        const container = document.getElementById("favorite-movies-container");
+        container.innerHTML = ""; // Clear existing content
+
+        
+
+        filteredMovies.forEach(movie => {
+            let card = document.createElement("section");
+            card.classList.add("favorite-movies"); //adds class to the card
+            const name = document.createElement("h3");
+            const img = document.createElement("img");
+            
+
+            name.textContent = movie.movieTitle;
+            img.setAttribute("src", movie.imageURL);
+            img.setAttribute("alt", `${movie.movieTitle} Poster`);
+
+            card.appendChild(name);
+            card.appendChild(img);
+            container.appendChild(card);
+
+        });
+    }
+
     
     
     // Check for filter query parameter
@@ -199,17 +232,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //check filter value and create movie cards based on old filter
     if (filter === "old") {
-        const oldMovies = movies.filter(movie => parseInt(movie.yearReleased) < 2025);
+        const oldMovies = movies.filter(movie => parseInt(movie.dateReleased.split(" ")[2]) < 2025);
         createMovieCard(oldMovies);
     //check filter value and create movie cards based on new filter
     } else if (filter == "new") {
-        const newMovies = movies.filter(movie => parseInt(movie.yearReleased) >= 2025);
+        const newMovies = movies.filter(movie => parseInt(movie.dateReleased.split(" ")[2]) >= 2025);
         createMovieCard(newMovies);
     } else if (filter == "comingsoon") {
         const comingSoonMovies = movies.filter(movie => movie.released == "No");
         createMovieCard(comingSoonMovies);
     } else if (filter == "recent"){
-        const recentlyReleasedMovies = movies.filter(movie => parseInt(movie.yearReleased) === 2025 && movie.released === "Yes");
+        const recentlyReleasedMovies = movies.filter(movie => parseInt(movie.dateReleased.split(" ")[2]) === 2025 && movie.released === "Yes");
+        createMovieCard(recentlyReleasedMovies);
+    
+    } else if (filter == "favorite"){
+        const recentlyReleasedMovies = movies.filter(movie => movie.staffFavorites === "Yes");
         createMovieCard(recentlyReleasedMovies);
     
     } else {
@@ -223,6 +260,50 @@ document.addEventListener("DOMContentLoaded", () => {
     const comingSoonMovies = movies.filter(movie => movie.released == "No");
         createComingSoonMovieCard(comingSoonMovies);
 
-    const recentMovies = movies.filter(movie => parseInt(movie.yearReleased) === 2025 && movie.released === "Yes");
+    const recentMovies = movies.filter(movie => parseInt(movie.dateReleased.split(" ")[2]) === 2025 && movie.released === "Yes");
         createRecentMovieCard(recentMovies);
+
+    const favoriteMovies = movies.filter(movie => movie.staffFavorites === "Yes");
+        createFavoriteMovieCard(favoriteMovies);
+
+
+        
+    const reasons = [
+        {
+        id: "fc-1888",
+        name: "Movie has the wrong description",
+        averagerating: 4.5
+        },
+        {
+        id: "fc-2050",
+        name: "power laces",
+        averagerating: 4.7
+        },
+        {
+        id: "fs-1987",
+        name: "time circuits",
+        averagerating: 3.5
+        },
+        {
+        id: "ac-2000",
+        name: "low voltage reactor",
+        averagerating: 3.9
+        },
+        {
+        id: "jj-1969",
+        name: "warp equalizer",
+        averagerating: 5.0
+            }
+    ];
+    const reasonSelect = document.getElementById("reason");
+        reasons.forEach( reason => {
+            const option = document.createElement("option");
+            option.value = reason.id;
+            option.textContent = reason.name;
+            reasonSelect.appendChild(option);
+
+        });
+    
+
+
 });

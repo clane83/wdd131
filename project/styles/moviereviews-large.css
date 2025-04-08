@@ -1,5 +1,19 @@
 @media screen and (min-width: 500px) {
 
+    #menu {
+      display: none; 
+    }
+
+    .navigation {
+      display: flex;
+      flex-direction: row !important;
+    }
+
+    .navigation a {
+      display: block;
+      flex: 1 1 100%;
+    } 
+
 
     #movies-container {
         display: grid;
@@ -60,27 +74,27 @@
       }
 
 
-      .coming-soon-movies, .recently-released-movies {
+      .coming-soon-movies, .recently-released-movies, .staff-favorite-movies {
         display: flex;
         flex-direction: column; 
         gap: 1rem; 
         padding: 1rem; 
     }
     
-    .coming-soon-movies h3, .recently-released-movies h3 {
+    .coming-soon-movies h3, .recently-released-movies h3, .staff-favorite-movies h3 {
         text-align: left; 
         margin: 0; 
         padding: 0; 
     }
     
-    .coming-soon-movies .movie-row, .recently-released-movies .movie-row {
+    .coming-soon-movies .movie-row, .recently-released-movies .movie-row, .staff-favorite-movies .movie-row {
         display: flex; 
         flex-wrap: nowrap; 
         overflow-x: auto; 
         gap: 1rem; 
     }
     
-    .coming-soon-movies .movie-row img, .recently-released-movies .movie-row img{
+    .coming-soon-movies .movie-row img, .recently-released-movies .movie-row img, .staff-favorite-movies .movie-row img{
         display: block;
         height: auto;
         max-width: 300px; 
