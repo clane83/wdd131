@@ -252,4 +252,9 @@ footer {
     text-align: center;
     padding-top: 2rem;
     background-color: var(--background-color);
+    font-family: var(--font-family);
+}
+
+footer a {
+    color: var(--font-color);
 }

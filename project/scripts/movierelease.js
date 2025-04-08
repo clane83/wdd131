@@ -10,24 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
         hamButton.classList.toggle("open");
     });
 
-    const reasons = [
-        { id: "1", name: "Movie has the wrong description"},
-        { id: "2", name: "Movie has the wrong release date" },
-        { id: "3", name: "Request to add a feature"},
-        { id: "4", name: "Recommend a movie"},
-        { id: "5", name: "Movie is not displaying correctly"},
-        { id: "6", name: "Other"}
-    ];
-    const reasonSelect = document.getElementById("reason");
-        reasons.forEach( reason => {
-            const option = document.createElement("option");
-            option.value = reason.id;
-            option.textContent = reason.name;
-            reasonSelect.appendChild(option);
 
-        });
-    });
-document.addEventListener("DOMContentLoaded", () => {
+
 
     const movies = [
         {
@@ -136,6 +120,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function createMovieCard(filteredMovies) {
         const container = document.getElementById("movies-container");
+        if (!container) {
+            console.error("Element with id movies-container not foudn in the DOM.");
+        }
+        
         container.innerHTML = ""; // Clear existing content
 
         
@@ -169,10 +157,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function createComingSoonMovieCard(filteredMovies) {
         const container = document.getElementById("coming-soon-movies-container");
+        if (container) {
         container.innerHTML = ""; // Clear existing content
+        } else {
+            console.error("Element with id 'coming-soon-movies-container' not found in the DOM.");
 
-        
-
+        }
         filteredMovies.forEach(movie => {
             let card = document.createElement("section");
             card.classList.add("coming-soon"); //adds class to the card
